@@ -1,0 +1,85 @@
+<title>Network Performance Dashboard</title>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../app/base.css?v=1">
+
+<div class="topbar"><div class="topbar-inner">
+  <div class="brand">
+    <span class="mark">HB5</span>
+    <span>Network Performance</span>
+    <span class="sub">MaidThis, 46 markets, public search signals</span>
+  </div>
+  <nav class="topnav">
+    <a href="../">Workbench</a>
+    <a href="./" class="active">Dashboard</a>
+    <a href="../reports/">Reports</a>
+    <a href="https://github.com/AlekSpasSEO/home-by-five">Repo</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+  <div class="eyebrow">Company view</div>
+  <h1>MaidThis network, measured from outside</h1>
+  <p class="lede">Every number on this page comes from public sources: the search index,
+  Google Maps packs and Google Ads keyword data, pulled on 26 August 2026. Nothing here
+  depends on MaidThis internal analytics, which is the point. This is what an outsider
+  can already see about the network, before anyone shares a dashboard login.</p>
+
+  <div class="grid g4" id="kpis" style="margin:20px 0 6px"></div>
+
+  <div class="callout warn" style="margin-top:18px">
+    <div class="h">What a red or empty cell here does not mean</div>
+    <p>A market with no Google Business Profile in the top 20 Maps results is not
+    necessarily a failing franchise. It may be awarded but not yet launched, trading under
+    a different profile name, or ranking outside the city centroid this scan used. Treat
+    every one as a question to ask, not a verdict.</p>
+  </div>
+
+  <h2>Markets</h2>
+  <div class="ctrlrow">
+    <input type="text" id="q" placeholder="Filter market, city or state" style="min-width:230px">
+    <select id="statusf">
+      <option value="">All operating states</option>
+      <option>OPERATING</option><option>NOT VISIBLE</option>
+    </select>
+    <select id="stagef">
+      <option value="">All stages</option>
+      <option>LAUNCH</option><option>GROW</option><option>FIX</option><option>DEFEND</option>
+    </select>
+    <span class="muted" id="count"></span>
+    <a class="badge" id="csv" href="../data/maidthis_market_opportunity.csv" download>Download CSV</a>
+  </div>
+
+  <div class="tablewrap"><table id="tbl">
+    <thead><tr>
+      <th class="sortable" data-k="market">Market</th>
+      <th class="sortable" data-k="state">St</th>
+      <th class="sortable" data-k="status">Stage</th>
+      <th class="sortable num" data-k="opportunity_score">Opp</th>
+      <th class="sortable num" data-k="total_msv">Demand /mo</th>
+      <th class="sortable num" data-k="str_share_pct">STR %</th>
+      <th class="sortable num" data-k="weighted_cpc_usd">CPC</th>
+      <th class="sortable num" data-k="model_cpl_usd">Model CPL</th>
+      <th class="sortable num" data-k="maps_rank_general">Maps</th>
+      <th class="sortable num" data-k="maps_rank_str">Maps STR</th>
+      <th class="sortable num" data-k="gbp_reviews">Reviews</th>
+      <th class="sortable num" data-k="pack_median_reviews">Pack med.</th>
+      <th class="sortable num" data-k="strong_competitors_20">Strong comp.</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+
+  <div id="detail" style="margin-top:22px"></div>
+
+  <div class="footer">
+    <p>Opportunity score is a MODEL, not an observation. Weights are published in
+    <code>reports/market_opportunity.md</code> and in the score breakdown of every market
+    detail panel below. Search volume and CPC are Google Ads data via DataForSEO; Maps
+    positions are live Google Maps packs for <code>house cleaning service</code> and
+    <code>airbnb cleaning service</code> at each city centroid.</p>
+    <p>Internal working document. Not for distribution.</p>
+  </div>
+</div>
+
+<script src="../app/dashboard.js?v=1"></script>

@@ -1,0 +1,8 @@
+# DataForSEO location reference dumps, 53 MB, re-fetchable for free
+raw/locs_locations.json
+raw/locs_us.json
+raw/collect.log
+raw/market_signals.json
+__pycache__/
+*.pyc
+.claude/

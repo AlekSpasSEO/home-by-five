@@ -1,0 +1,142 @@
+<title>Reports</title>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../app/base.css?v=1">
+<style>
+  .doc h1 { margin-top: 0; }
+  .doc h2 { border-bottom: 1px solid var(--line); padding-bottom: 7px; }
+  .doc p, .doc li { color: var(--ink-2); }
+  .doc table { margin: 12px 0; }
+  .doc pre { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px;
+             padding: 13px 15px; overflow-x: auto; font-size: 12.5px; color: var(--ink-2); }
+  .doc hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
+  .doc blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 2px 0 2px 16px;
+                    color: var(--ink); font-style: normal; }
+  .doclist a { display: block; padding: 11px 14px; border: 1px solid var(--line);
+               border-radius: 9px; margin-bottom: 8px; background: var(--panel); }
+  .doclist a:hover { background: var(--panel-2); text-decoration: none; border-color: var(--accent-dim); }
+  .doclist .t { color: var(--ink); font-weight: 600; }
+  .doclist .d { color: var(--ink-3); font-size: 13px; }
+</style>
+
+<div class="topbar"><div class="topbar-inner">
+  <div class="brand">
+    <span class="mark">HB5</span><span>Reports</span>
+    <span class="sub">Long-form analysis</span>
+  </div>
+  <nav class="topnav">
+    <a href="../">Workbench</a>
+    <a href="../dashboard/">Dashboard</a>
+    <a href="./" class="active">Reports</a>
+    <a href="https://github.com/AlekSpasSEO/home-by-five">Repo</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+  <div class="grid" style="grid-template-columns:minmax(230px,290px) 1fr;align-items:start">
+    <div class="doclist" id="list"></div>
+    <div class="panel doc" id="doc"><p class="muted">Loading…</p></div>
+  </div>
+</div>
+
+<script>
+var DOCS = [
+  ["../EXECUTIVE_BRIEF.md", "Executive brief", "The fifteen questions, answered"],
+  ["business_model.md", "Business model", "What is sold, and where the margin comes from"],
+  ["pricing_model.md", "Pricing model", "Salary maths, breakevens, the recommendation"],
+  ["maidthis_deep_dive.md", "MaidThis deep dive", "Locations, FDD economics, vendors, sentiment"],
+  ["pmnow_deep_dive.md", "PMNow deep dive", "What is verifiable, and the expert-capture system"],
+  ["offer_pmnow.md", "Offer B: PMNow pod", "Recommended first anchor"],
+  ["offer_maidthis.md", "Offer A: MaidThis unit", "Growth operations across the network"],
+  ["market_opportunity.md", "Market opportunity", "Scoring method and company market sizing"],
+  ["risk_register.md", "Risk register", "Twelve risks and the guarantee tiers"]
+];
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function inline(s) {
+  return esc(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/&amp;mdash;/g, "&mdash;").replace(/&amp;nbsp;/g, "&nbsp;");
+}
+
+function md(src) {
+  var out = [], lines = src.split("\n"), i = 0;
+  while (i < lines.length) {
+    var l = lines[i];
+    if (/^```/.test(l)) {
+      var buf = []; i++;
+      while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]);
+      i++; out.push("<pre>" + esc(buf.join("\n")) + "</pre>"); continue;
+    }
+    if (/^\|/.test(l) && i + 1 < lines.length && /^\|[\s\-:|]+\|$/.test(lines[i + 1])) {
+      var head = l.split("|").slice(1, -1);
+      i += 2; var rows = [];
+      while (i < lines.length && /^\|/.test(lines[i])) rows.push(lines[i++].split("|").slice(1, -1));
+      out.push('<div class="tablewrap"><table><thead><tr>'
+        + head.map(function (h) { return "<th>" + inline(h.trim()) + "</th>"; }).join("")
+        + "</tr></thead><tbody>"
+        + rows.map(function (r) {
+            return "<tr>" + r.map(function (c) { return "<td>" + inline(c.trim()) + "</td>"; }).join("") + "</tr>";
+          }).join("")
+        + "</tbody></table></div>");
+      continue;
+    }
+    if (/^#{1,4} /.test(l)) {
+      var n = l.match(/^#+/)[0].length;
+      out.push("<h" + n + ">" + inline(l.slice(n + 1)) + "</h" + n + ">"); i++; continue;
+    }
+    if (/^---+$/.test(l)) { out.push("<hr>"); i++; continue; }
+    if (/^> /.test(l)) {
+      var q = []; while (i < lines.length && /^>/.test(lines[i])) q.push(lines[i++].replace(/^>\s?/, ""));
+      out.push("<blockquote>" + q.map(function (x) { return x ? "<p>" + inline(x) + "</p>" : ""; }).join("") + "</blockquote>");
+      continue;
+    }
+    if (/^\s*[-*] |^\s*\d+\. /.test(l)) {
+      var ord = /^\s*\d+\./.test(l), items = [], cur = null;
+      while (i < lines.length && (/^\s*[-*] |^\s*\d+\. /.test(lines[i]) || (cur !== null && /^\s{2,}\S/.test(lines[i])))) {
+        if (/^\s*[-*] |^\s*\d+\. /.test(lines[i])) {
+          if (cur !== null) items.push(cur);
+          cur = lines[i].replace(/^\s*(?:[-*]|\d+\.)\s+/, "");
+        } else cur += " " + lines[i].trim();
+        i++;
+      }
+      if (cur !== null) items.push(cur);
+      out.push("<" + (ord ? "ol" : "ul") + ' class="clean">'
+        + items.map(function (x) { return "<li>" + inline(x) + "</li>"; }).join("")
+        + "</" + (ord ? "ol" : "ul") + ">");
+      continue;
+    }
+    if (!l.trim()) { i++; continue; }
+    var p = []; while (i < lines.length && lines[i].trim() && !/^[#>|`-]|^\s*[-*] |^\s*\d+\. /.test(lines[i])) p.push(lines[i++]);
+    if (p.length) out.push("<p>" + inline(p.join(" ")) + "</p>"); else i++;
+  }
+  return out.join("\n");
+}
+
+function load(path) {
+  location.hash = path;
+  document.querySelectorAll(".doclist a").forEach(function (a) {
+    a.style.borderColor = a.dataset.p === path ? "var(--accent-dim)" : "";
+  });
+  fetch(path).then(function (r) { return r.text(); }).then(function (t) {
+    document.getElementById("doc").innerHTML = md(t);
+    window.scrollTo(0, 0);
+  }).catch(function (e) {
+    document.getElementById("doc").innerHTML = '<p class="muted">Could not load ' + path + "</p>";
+  });
+}
+
+var list = document.getElementById("list");
+DOCS.forEach(function (d) {
+  var a = document.createElement("a");
+  a.href = "javascript:void 0"; a.dataset.p = d[0];
+  a.innerHTML = '<span class="t">' + d[1] + '</span><br><span class="d">' + d[2] + "</span>";
+  a.onclick = function () { load(d[0]); };
+  list.appendChild(a);
+});
+load((location.hash || "#../EXECUTIVE_BRIEF.md").slice(1));
+</script>

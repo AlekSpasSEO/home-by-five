@@ -1,0 +1,416 @@
+{
+ "los-angeles": {
+  "ads_code": 1013962,
+  "serp_code": 1013962,
+  "loc_name": "Los Angeles,California,United States",
+  "display": "Los Angeles (corporate)",
+  "city": "Los Angeles",
+  "state": "CA",
+  "type": "corporate"
+ },
+ "losangelesvalley": {
+  "ads_code": 1013962,
+  "serp_code": 1013962,
+  "loc_name": "Los Angeles,California,United States",
+  "display": "LA Valley",
+  "city": "Los Angeles",
+  "state": "CA",
+  "type": "territory"
+ },
+ "san-francisco": {
+  "ads_code": 1014221,
+  "serp_code": 1014221,
+  "loc_name": "San Francisco,California,United States",
+  "display": "San Francisco",
+  "city": "San Francisco",
+  "state": "CA",
+  "type": "territory"
+ },
+ "denver": {
+  "ads_code": 1014485,
+  "serp_code": 1014485,
+  "loc_name": "Denver,Colorado,United States",
+  "display": "Denver",
+  "city": "Denver",
+  "state": "CO",
+  "type": "territory"
+ },
+ "phoenix": {
+  "ads_code": 1013462,
+  "serp_code": 1013462,
+  "loc_name": "Phoenix,Arizona,United States",
+  "display": "Phoenix",
+  "city": "Phoenix",
+  "state": "AZ",
+  "type": "territory"
+ },
+ "scottsdale": {
+  "ads_code": 1013482,
+  "serp_code": 1013482,
+  "loc_name": "Scottsdale,Arizona,United States",
+  "display": "Scottsdale",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "type": "territory"
+ },
+ "saltlakecity": {
+  "ads_code": 1026990,
+  "serp_code": 1026990,
+  "loc_name": "Salt Lake City,Utah,United States",
+  "display": "Salt Lake City",
+  "city": "Salt Lake City",
+  "state": "UT",
+  "type": "territory"
+ },
+ "austin": {
+  "ads_code": 1026201,
+  "serp_code": 1026201,
+  "loc_name": "Austin,Texas,United States",
+  "display": "Austin",
+  "city": "Austin",
+  "state": "TX",
+  "type": "territory"
+ },
+ "nw-austin": {
+  "ads_code": 1026276,
+  "serp_code": 1026276,
+  "loc_name": "Cedar Park,Texas,United States",
+  "display": "Northwest Austin",
+  "city": "Cedar Park",
+  "state": "TX",
+  "type": "territory"
+ },
+ "san-antonio": {
+  "ads_code": 1026759,
+  "serp_code": 1026759,
+  "loc_name": "San Antonio,Texas,United States",
+  "display": "San Antonio",
+  "city": "San Antonio",
+  "state": "TX",
+  "type": "territory"
+ },
+ "nw-sanantonio": {
+  "ads_code": 1026465,
+  "serp_code": 1026465,
+  "loc_name": "Helotes,Texas,United States",
+  "display": "Northwest San Antonio",
+  "city": "Helotes",
+  "state": "TX",
+  "type": "territory"
+ },
+ "flower-mound": {
+  "ads_code": 1026398,
+  "serp_code": 1026398,
+  "loc_name": "Flower Mound,Texas,United States",
+  "display": "Flower Mound",
+  "city": "Flower Mound",
+  "state": "TX",
+  "type": "territory"
+ },
+ "katy": {
+  "ads_code": 1026515,
+  "serp_code": 1026515,
+  "loc_name": "Katy,Texas,United States",
+  "display": "Katy",
+  "city": "Katy",
+  "state": "TX",
+  "type": "territory"
+ },
+ "spring": {
+  "ads_code": 1026808,
+  "serp_code": 1026808,
+  "loc_name": "Spring,Texas,United States",
+  "display": "Spring",
+  "city": "Spring",
+  "state": "TX",
+  "type": "territory"
+ },
+ "ne-houston": {
+  "ads_code": 1026486,
+  "serp_code": 1026486,
+  "loc_name": "Humble,Texas,United States",
+  "display": "Northeast Houston",
+  "city": "Humble",
+  "state": "TX",
+  "type": "territory"
+ },
+ "chicago": {
+  "ads_code": 1016367,
+  "serp_code": 1016367,
+  "loc_name": "Chicago,Illinois,United States",
+  "display": "Chicago",
+  "city": "Chicago",
+  "state": "IL",
+  "type": "territory"
+ },
+ "minneapolis": {
+  "ads_code": 1019973,
+  "serp_code": 1019973,
+  "loc_name": "Minneapolis,Minnesota,United States",
+  "display": "Minneapolis",
+  "city": "Minneapolis",
+  "state": "MN",
+  "type": "territory"
+ },
+ "milwaukee": {
+  "ads_code": 1028087,
+  "serp_code": 1028087,
+  "loc_name": "Milwaukee,Wisconsin,United States",
+  "display": "Milwaukee",
+  "city": "Milwaukee",
+  "state": "WI",
+  "type": "territory"
+ },
+ "fishers": {
+  "ads_code": 1017093,
+  "serp_code": 1017093,
+  "loc_name": "Fishers,Indiana,United States",
+  "display": "Fishers",
+  "city": "Fishers",
+  "state": "IN",
+  "type": "territory"
+ },
+ "cincinnati": {
+  "ads_code": 1023626,
+  "serp_code": 1023626,
+  "loc_name": "Cincinnati,Ohio,United States",
+  "display": "Cincinnati",
+  "city": "Cincinnati",
+  "state": "OH",
+  "type": "territory"
+ },
+ "pittsburgh": {
+  "ads_code": 1025202,
+  "serp_code": 1025202,
+  "loc_name": "Pittsburgh,Pennsylvania,United States",
+  "display": "Pittsburgh",
+  "city": "Pittsburgh",
+  "state": "PA",
+  "type": "territory"
+ },
+ "philadelphia": {
+  "ads_code": 1025197,
+  "serp_code": 1025197,
+  "loc_name": "Philadelphia,Pennsylvania,United States",
+  "display": "Philadelphia",
+  "city": "Philadelphia",
+  "state": "PA",
+  "type": "territory"
+ },
+ "kingofprussia": {
+  "ads_code": 1024985,
+  "serp_code": 1024985,
+  "loc_name": "King of Prussia,Pennsylvania,United States",
+  "display": "King of Prussia",
+  "city": "King of Prussia",
+  "state": "PA",
+  "type": "territory"
+ },
+ "jersey-hoboken": {
+  "ads_code": 1022194,
+  "serp_code": 1022194,
+  "loc_name": "Jersey City,New Jersey,United States",
+  "display": "Jersey City / Hoboken",
+  "city": "Jersey City",
+  "state": "NJ",
+  "type": "territory"
+ },
+ "boston": {
+  "ads_code": 1018127,
+  "serp_code": 1018127,
+  "loc_name": "Boston,Massachusetts,United States",
+  "display": "Boston",
+  "city": "Boston",
+  "state": "MA",
+  "type": "territory"
+ },
+ "baltimore": {
+  "ads_code": 1018511,
+  "serp_code": 1018511,
+  "loc_name": "Baltimore,Maryland,United States",
+  "display": "Baltimore",
+  "city": "Baltimore",
+  "state": "MD",
+  "type": "territory"
+ },
+ "alexandria": {
+  "ads_code": 1027019,
+  "serp_code": 1027019,
+  "loc_name": "Alexandria,Virginia,United States",
+  "display": "Alexandria",
+  "city": "Alexandria",
+  "state": "VA",
+  "type": "territory"
+ },
+ "arlington": {
+  "ads_code": 1027027,
+  "serp_code": 1027027,
+  "loc_name": "Arlington,Virginia,United States",
+  "display": "Arlington",
+  "city": "Arlington",
+  "state": "VA",
+  "type": "territory"
+ },
+ "richmond": {
+  "ads_code": 1027270,
+  "serp_code": 1027270,
+  "loc_name": "Richmond,Virginia,United States",
+  "display": "Richmond",
+  "city": "Richmond",
+  "state": "VA",
+  "type": "territory"
+ },
+ "charlotte": {
+  "ads_code": 1021048,
+  "serp_code": 1021048,
+  "loc_name": "Charlotte,North Carolina,United States",
+  "display": "Charlotte",
+  "city": "Charlotte",
+  "state": "NC",
+  "type": "territory"
+ },
+ "durham": {
+  "ads_code": 1021085,
+  "serp_code": 1021085,
+  "loc_name": "Durham,North Carolina,United States",
+  "display": "Durham",
+  "city": "Durham",
+  "state": "NC",
+  "type": "territory"
+ },
+ "wilmington": {
+  "ads_code": 1021374,
+  "serp_code": 1021374,
+  "loc_name": "Wilmington,North Carolina,United States",
+  "display": "Wilmington",
+  "city": "Wilmington",
+  "state": "NC",
+  "type": "territory"
+ },
+ "myrtle-beach": {
+  "ads_code": 1025622,
+  "serp_code": 1025622,
+  "loc_name": "Myrtle Beach,South Carolina,United States",
+  "display": "Myrtle Beach",
+  "city": "Myrtle Beach",
+  "state": "SC",
+  "type": "territory"
+ },
+ "columbia": {
+  "ads_code": 1025530,
+  "serp_code": 1025530,
+  "loc_name": "Columbia,South Carolina,United States",
+  "display": "Columbia",
+  "city": "Columbia",
+  "state": "SC",
+  "type": "territory"
+ },
+ "chattanooga": {
+  "ads_code": 1025943,
+  "serp_code": 1025943,
+  "loc_name": "Chattanooga,Tennessee,United States",
+  "display": "Chattanooga",
+  "city": "Chattanooga",
+  "state": "TN",
+  "type": "territory"
+ },
+ "spring-hill": {
+  "ads_code": 9052900,
+  "serp_code": 9052900,
+  "loc_name": "Spring Hill,Tennessee,United States",
+  "display": "Spring Hill",
+  "city": "Spring Hill",
+  "state": "TN",
+  "type": "territory"
+ },
+ "atlanta": {
+  "ads_code": 1015254,
+  "serp_code": 1015254,
+  "loc_name": "Atlanta,Georgia,United States",
+  "display": "Atlanta",
+  "city": "Atlanta",
+  "state": "GA",
+  "type": "territory"
+ },
+ "northatlanta": {
+  "ads_code": 1015249,
+  "serp_code": 1015249,
+  "loc_name": "Alpharetta,Georgia,United States",
+  "display": "North Atlanta",
+  "city": "Alpharetta",
+  "state": "GA",
+  "type": "territory"
+ },
+ "henry-county": {
+  "ads_code": 1015433,
+  "serp_code": 1015433,
+  "loc_name": "McDonough,Georgia,United States",
+  "display": "Henry County",
+  "city": "McDonough",
+  "state": "GA",
+  "type": "territory"
+ },
+ "miami": {
+  "ads_code": 1015116,
+  "serp_code": 1015116,
+  "loc_name": "Miami,Florida,United States",
+  "display": "Miami",
+  "city": "Miami",
+  "state": "FL",
+  "type": "territory"
+ },
+ "west-palm-beach": {
+  "ads_code": 1015229,
+  "serp_code": 1015229,
+  "loc_name": "West Palm Beach,Florida,United States",
+  "display": "West Palm Beach",
+  "city": "West Palm Beach",
+  "state": "FL",
+  "type": "territory"
+ },
+ "cape-coral": {
+  "ads_code": 1014976,
+  "serp_code": 1014976,
+  "loc_name": "Cape Coral,Florida,United States",
+  "display": "Cape Coral",
+  "city": "Cape Coral",
+  "state": "FL",
+  "type": "territory"
+ },
+ "tampa": {
+  "ads_code": 1015214,
+  "serp_code": 1015214,
+  "loc_name": "Tampa,Florida,United States",
+  "display": "Tampa",
+  "city": "Tampa",
+  "state": "FL",
+  "type": "territory"
+ },
+ "east-tampa": {
+  "ads_code": 1014964,
+  "serp_code": 1014964,
+  "loc_name": "Brandon,Florida,United States",
+  "display": "East Tampa",
+  "city": "Brandon",
+  "state": "FL",
+  "type": "territory"
+ },
+ "st-petersburg-clearwater": {
+  "ads_code": 1015206,
+  "serp_code": 1015206,
+  "loc_name": "St. Petersburg,Florida,United States",
+  "display": "St. Petersburg / Clearwater",
+  "city": "St. Petersburg",
+  "state": "FL",
+  "type": "territory"
+ },
+ "mckinney": {
+  "ads_code": 1026607,
+  "serp_code": 1026607,
+  "loc_name": "McKinney,Collin County,Texas,United States",
+  "display": "McKinney",
+  "city": "McKinney",
+  "state": "TX",
+  "type": "territory"
+ }
+}

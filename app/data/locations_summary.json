@@ -1,0 +1,9 @@
+{
+ "market_pages": 46,
+ "operating_confirmed": 18,
+ "awarded_or_not_visible": 27,
+ "corporate": 1,
+ "named_owners": 12,
+ "multi_unit_owners": 3,
+ "method": "URL segments from the search index, operating status confirmed by live GBP presence in the Maps pack"
+}

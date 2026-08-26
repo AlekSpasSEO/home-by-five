@@ -1,0 +1,14 @@
+metric,value,evidence_class,confidence,source,note
+Active clients,"Well over 100 (management statement, unverified)",STRONG INFERENCE,Medium,Client-relayed management statement,"Not published anywhere reachable. The public site says 500+ contractors served, which is cumulative, not active."
+Contractors served historically,500+,FACT,High,https://pmnow.biz/,Cumulative marketing claim.
+Accounts per strategist,35 - 45,STRONG INFERENCE,Medium,Client-relayed management statement,This is the single most important delivery ratio in the PMNow model and the basis for sizing a 40-account pod.
+Employee count,11 to 200 depending on the data broker,STRONG INFERENCE,Low,ZoomInfo / Crunchbase / Prospeo / Clodura,A 10x spread across scraped sources. Unusable as a planning input.
+Revenue estimate,Under $5M (ZoomInfo band); no filed figure exists,STRONG INFERENCE,Low,https://www.zoominfo.com/c/proven-marketing-now/475768855,"Private LLC, no filings. Do not quote a point estimate."
+Modelled revenue from client count and ARPA,"100 active clients: $1.5M ARR at $1,250 ARPA, $2.4M at $2,000, $3.0M at $2,500",MODEL,Medium,This study,"Bracketed by published home-services retainer ranges of $1,000 to $3,500 for SEO and $2,500 to $12,000 for full service."
+Services,"Google Maps, website SEO, Local Service Ads, Google Ads, conversion-focused websites",FACT,High,https://pmnow.biz/,
+Niche,"HVAC, plumbing, electrical home-service contractors",FACT,High,https://pmnow.biz/,
+Contract terms,"No long-term contracts, 30-day cancellation notice",FACT,High,https://pmnow.biz/,"Month-to-month terms make silent-account churn the dominant commercial risk, which matches the stated management concern."
+Client sentiment,4.8/5 from 102 Birdeye reviews,FACT,High,https://reviews.birdeye.com/pmnow-proven-marketing-now-166839520848816,"OWNED collection channel. Positive but selection-biased. No independent negative cluster was found, which is itself a meaningful signal."
+Stated internal concern,Maintaining quality on quiet accounts nobody is watching,STRONG INFERENCE,Medium,Client-relayed management statement,"This is the actual product being bought: coverage, not cheaper labour."
+External expert model,Adopted from Jason Hennessey's outsourcing-genius approach,STRONG INFERENCE,Medium,https://www.marketingspeak.com/blueprint-to-scaling-an-seo-agency-with-jason-hennessey/,The method is documented publicly. The specific dollar budgets quoted in the brief were not verifiable.
+Success measure,Client-side call volume,STRONG INFERENCE,Medium,Client-relayed management statement,Rankings are not the currency. Any guarantee has to be phrased in call or lead terms where attribution exists.
