@@ -174,7 +174,7 @@
 
   function render() { kpis(); rows(); detail(); }
 
-  fetch("../app/data/markets.json").then(function (r) { return r.json(); }).then(function (d) {
+  fetch("../app/data/markets.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     D = d;
     document.querySelectorAll("th.sortable").forEach(function (th) {
       th.onclick = function () {

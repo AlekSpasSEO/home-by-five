@@ -122,7 +122,7 @@ function load(path) {
   document.querySelectorAll(".doclist a").forEach(function (a) {
     a.style.borderColor = a.dataset.p === path ? "var(--accent-dim)" : "";
   });
-  fetch(path).then(function (r) { return r.text(); }).then(function (t) {
+  fetch(path, { cache: "no-cache" }).then(function (r) { return r.text(); }).then(function (t) {
     document.getElementById("doc").innerHTML = md(t);
     window.scrollTo(0, 0);
   }).catch(function (e) {

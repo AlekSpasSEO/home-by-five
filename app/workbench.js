@@ -411,11 +411,11 @@
   if (!window.HB5[start] && start !== "model" && start !== "evidence") start = "verdict";
   show(start);
 
-  fetch("app/data/economics.json").then(function (r) { return r.json(); }).then(function (d) {
+  fetch("app/data/economics.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     ECON = d;
     if (location.hash === "#model") renderModel();
   });
-  fetch("research/source_ledger.csv").then(function (r) { return r.text(); }).then(function (t) {
+  fetch("research/source_ledger.csv", { cache: "no-cache" }).then(function (r) { return r.text(); }).then(function (t) {
     LEDGER = parseCSV(t);
     if (location.hash === "#evidence") renderEvidence();
   });
