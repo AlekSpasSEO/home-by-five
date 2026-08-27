@@ -19,77 +19,88 @@
    "role": "Growth / Product Director (owner)",
    "net_mkd": 140000,
    "gross_mkd": 214465,
-   "employer_usd": 4273,
+   "employer_usd": 4273.231702532614,
+   "employer_usd_display": 4273,
    "note": "Owns the client relationship, the model and the QA bar"
   },
   {
    "role": "Senior Search Strategist",
    "net_mkd": 90000,
    "gross_mkd": 137304,
-   "employer_usd": 2736,
+   "employer_usd": 2735.7993586483294,
+   "employer_usd_display": 2736,
    "note": "Diagnosis, market strategy, senior judgement calls"
   },
   {
    "role": "Automation / Data Engineer",
    "net_mkd": 85000,
    "gross_mkd": 129588,
-   "employer_usd": 2582,
+   "employer_usd": 2582.056124259901,
+   "employer_usd_display": 2582,
    "note": "Pipelines, agents, dashboards, internal tooling"
   },
   {
    "role": "QA Lead",
    "net_mkd": 70000,
    "gross_mkd": 106440,
-   "employer_usd": 2121,
+   "employer_usd": 2120.8264210946154,
+   "employer_usd_display": 2121,
    "note": "Portfolio review, SLA enforcement, account health"
   },
   {
    "role": "Paid Media Specialist",
    "net_mkd": 65000,
    "gross_mkd": 98724,
-   "employer_usd": 1967,
+   "employer_usd": 1967.083186706187,
+   "employer_usd_display": 1967,
    "note": "Budget allocation, channel QA, creative testing"
   },
   {
    "role": "Local SEO Specialist",
    "net_mkd": 60000,
    "gross_mkd": 91008,
-   "employer_usd": 1813,
+   "employer_usd": 1813.3399523177584,
+   "employer_usd_display": 1813,
    "note": "GBP, Maps, citations, local entity work"
   },
   {
    "role": "Growth / Data Analyst",
    "net_mkd": 60000,
    "gross_mkd": 91008,
-   "employer_usd": 1813,
+   "employer_usd": 1813.3399523177584,
+   "employer_usd_display": 1813,
    "note": "Funnel analysis, reporting, market scorecards"
   },
   {
    "role": "Content Strategist",
    "net_mkd": 50000,
    "gross_mkd": 75576,
-   "employer_usd": 1506,
+   "employer_usd": 1505.8534835409014,
+   "employer_usd_display": 1506,
    "note": "Content planning, briefs, on-page"
   },
   {
    "role": "Account / Project Coordinator",
    "net_mkd": 45000,
    "gross_mkd": 67860,
-   "employer_usd": 1352,
+   "employer_usd": 1352.110249152473,
+   "employer_usd_display": 1352,
    "note": "Scheduling, client comms support, delivery tracking"
   },
   {
    "role": "Junior SEO Executive",
    "net_mkd": 35000,
    "gross_mkd": 52427,
-   "employer_usd": 1045,
+   "employer_usd": 1044.623780375616,
+   "employer_usd_display": 1045,
    "note": "Implementation, audits, repeatable execution"
   },
   {
    "role": "VA / Operations Assistant",
    "net_mkd": 32000,
    "gross_mkd": 47798,
-   "employer_usd": 952,
+   "employer_usd": 952.377839742559,
+   "employer_usd_display": 952,
    "note": "Data entry, listings, admin, reporting prep"
   }
  ],

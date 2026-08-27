@@ -196,8 +196,10 @@ def main():
         "statutory": {"contribution_rate": CONTRIB_RATE, "pit_rate": PIT_RATE,
                       "monthly_allowance_mkd": ALLOWANCE_MKD,
                       "employer_addon": EMPLOYER_ADDON, "admin_buffer": ADMIN_BUFFER},
+        # exact, unrounded, so the browser model reproduces the CSV to the dollar
         "roles": [{"role": r, "net_mkd": n, "gross_mkd": round(gross_from_net(n)),
-                   "employer_usd": round(SALARY[r]), "note": note} for r, n, note in ROLES],
+                   "employer_usd": SALARY[r], "employer_usd_display": round(SALARY[r]),
+                   "note": note} for r, n, note in ROLES],
         "overheads_usd": OVERHEAD_USD, "pod_shapes": POD_SHAPES, "pod_size": POD_SIZE,
         "expert_budget_per_pod_usd": EXPERT_BUDGET_PER_POD, "contingency": CONTINGENCY,
         "scenarios": rows,
