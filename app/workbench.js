@@ -128,7 +128,7 @@
       + '<div class="field"><label>Price per unit / month <b id="prv"></b></label>'
       + '<input type="range" id="pr" min="150" max="800" step="10"></div>'
       + '<div class="field"><label>Owner draw / month <b id="owv"></b></label>'
-      + '<input type="range" id="ow" min="1000" max="6000" step="100"></div>'
+      + '<input type="range" id="ow" min="1000" max="6000" step="1"></div>'
       + '<div class="field"><label>Expert budget per pod / month <b id="exv"></b></label>'
       + '<input type="range" id="ex" min="0" max="4000" step="100"></div>'
       + '<label class="toggle"><input type="checkbox" id="off" checked> Skopje office '
@@ -157,12 +157,12 @@
       ? ECON.expert_budget_per_pod_usd : M.expert;
     document.getElementById("off").checked = M.office;
 
-    ["acc", "pr", "ow", "ex"].forEach(function (id) {
+    // each slider writes only its own field, so moving the book size never quantises
+    // the owner draw onto a step boundary and silently shifts the cost model
+    var FIELD = { acc: "accounts", pr: "price", ow: "owner", ex: "expert" };
+    Object.keys(FIELD).forEach(function (id) {
       document.getElementById(id).oninput = function () {
-        M.accounts = +document.getElementById("acc").value;
-        M.price = +document.getElementById("pr").value;
-        M.owner = +document.getElementById("ow").value;
-        M.expert = +document.getElementById("ex").value;
+        M[FIELD[id]] = +this.value;
         sync();
       };
     });
@@ -182,8 +182,10 @@
 
     document.getElementById("accv").textContent = M.accounts + " units";
     document.getElementById("prv").textContent = usd(M.price);
-    document.getElementById("owv").textContent = usd(M.owner);
-    document.getElementById("exv").textContent = usd(M.expert);
+    document.getElementById("owv").textContent = usd(
+      M.owner === null ? ECON.roles[0].employer_usd : M.owner);
+    document.getElementById("exv").textContent = usd(
+      M.expert === null ? ECON.expert_budget_per_pod_usd : M.expert);
 
     var c = compute();
     var ok = c.gm >= 30, marginal = c.gm >= 0;
